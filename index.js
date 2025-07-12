@@ -26,8 +26,15 @@ function fetchWeather(city) {
     })
     .catch(error => {
       console.error(error);
-      document.getElementById('error-message').textContent = 'City not found. Please try again.';
-    });
+      const errorEl = document.getElementById('error-message');
+      errorEl.textContent = 'City not found. Please try again.';
+      
+      errorEl.hidden = false;
+  // Auto-hide after 3 seconds
+  setTimeout(() => {
+    errorEl.hidden = true;
+  }, 3000);
+});
 }
 
 // Display current weather

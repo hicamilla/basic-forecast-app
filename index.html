@@ -9,52 +9,54 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Abel&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <!--End Font-->
   <title>It's Coat Time?</title>
 </head>
 <body>
-  <!--Search Bar-->
-  <button class="theme-toggle"> ☀️ / 🌙 </button>
-  <div class="forecast-app">
-    <h1>Weatherly</h1>
-    <form class="search-form"  id="search-form">
-      <input type="search" placeholder="Enter a city..." required id="search-form-input" class="search-form-input" /> 
-      <input type="submit" value="Search" class="search-form-button" />
-    </form>
-  </div>
-  <!--Weather Now-->
-  <main>
-    <div id="error-message" style="color: red; text-align: center; margin-top: 10px;"></div>
-    <div class="current-weather" id="current-weather">
-      <h1 class="forecast-city">City Name</h1>
-      <div class="weather-now-container">
-        <div id="icon"></div>
-        <div class="temperature-now"></div>
-        <div class="unit-now">°C</div>
-      </div>
-      <p class="weather-details">
-        <span id="time"></span>,
-        <span id="description"></span>
-        <br/>
-        Wind: <strong id="wind-speed"></strong>
-        <br/>
-        Humidity <strong id="humidity"></strong>
-      </p>
+  <div class="app-container">
+    <!--Search Bar-->
+    <button class="theme-toggle"> ☀️ / 🌙 </button>
+    <div class="forecast-app">
+      <h1>Weatherly</h1>
+      <form class="search-form" id="search-form">
+        <input type="search" placeholder="Enter a city..." required id="search-form-input" class="search-form-input" />
+        <input type="submit" value="Search" class="search-form-button" />
+      </form>
     </div>
-    <!--End Weather Now-->
-    <!--Weekly Forecast-->
-    <section class="weekly-forecast">
-      <h2>For the week</h2>
-      <div class="forecast-grid" id="weekly-forecast">
-        <!--Dynamically-->
+    <!--Weather Now-->
+    <main>
+      <div id="error-message" class="error-popup" hidden></div>
+      <div class="current-weather" id="current-weather">
+        <div class="forecast-left">
+          <h1 class="forecast-city"></h1>
+          <p class="weather-details">
+            <span id="time"></span> - <span id="description"></span>
+            Wind: <strong id="wind-speed"></strong>
+            Humidity: <strong id="humidity"></strong>
+          </p>
+        </div>
+        <div class="forecast-right">
+          <div id="icon"></div>
+          <div class="temperature-now"></div>
+          <div class="unit-now">°C</div>
+        </div>
       </div>
-    </section>
-    <!-- End Weekly Forecast -->
-  </main>
-  <footer>
-    <p>Created by Camilla C • <a href="https://github.com/hicamilla" target="_blank">GitHub</a></p>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="index.js"></script>
+      <!--End Weather Now-->
+      <!--Weekly Forecast-->
+      <section class="weekly-forecast">
+        <h2>For the week</h2>
+        <div class="forecast-grid" id="weekly-forecast">
+          <!--Dynamically-->
+        </div>
+      </section>
+      <!-- End Weekly Forecast -->
+    </main>
+    <footer>
+      <p>Created by Camilla C • <a href="https://github.com/hicamilla" target="_blank">GitHub</a></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+  </div>
 </body>
 </html>
