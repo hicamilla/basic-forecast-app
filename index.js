@@ -13,11 +13,15 @@ form.addEventListener('submit', function (event) {
   const city = document.getElementById('search-form-input').value.trim();
   if (city) {
     fetchWeather(city);
+    form.reset();
   }
 });
 
 function fetchWeather(city) {
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&units=metric`;
+
+  //Loading state
+  document.getElementById('city').textContent = 'Loading...';
 
   axios.get(url)
     .then(response => {
