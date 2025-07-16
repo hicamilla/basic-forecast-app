@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="A simple landing page about forecast to practice HTML, CSS and JavaScript. Built by Camilla C.">
+  <title>It's coat time?</title>
+  <!--Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!--Sytem Color-->
+    <button class="theme-toggle">☀️/🌙</button>
+    <!--Search Bar-->
+    <header>
+      <div class="forecast-app">
+        <h1>Weatherly</h1>
+        <form class="search-form" id="search-form">
+          <input type="search" placeholder="Enter a city..." required id="search-form-input" class="search-form-input" />
+          <input type="submit" value="search" class="search-form-button" />
+        </form>
+      </div>
+    </header>
+    <!--Currently Weather-->
+    <main>
+      <div class="weather-data">
+        <h1 class="weather-city" id="city">Madrid</h1>
+        <p class="weather-details">
+          <span id="description">Clear sky</span>
+          <br>
+          Wind: <span id="wind-speed"></span>
+          <br>
+          Humidity: <span id="humidity"></span>
+        </p>
+        <div class="weather-container">
+          <div id="icon"></div>
+          <div class="weather-now"></div>
+          <div class="unit-now">°C</div>
+        </div>
+      </div>
+      <!--Weekly Forecast-->
+      <section class="weekly-weather">
+        <h2>For the week</h2>
+        <div class="forecast-grid" id="weekly-temperature">
+          <!--Dinamic Input-->
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Created by Camilla C. <a href="https://github.com/hicamilla" target="_blank">GitHub</a>
+      </p>
+    </footer>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/index.js"></script>
+</body>
+</html>
