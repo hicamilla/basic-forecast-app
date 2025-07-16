@@ -52,9 +52,7 @@ function updateWeeklyForecast(data) {
   data.list.forEach(item => {
     const date = new Date(item.dt * 1000);
     const day = date.toLocaleDateString('en-GB', {
-      weekday: 'short',
-      day: '2-digit',
-      month: '2-digit'
+      weekday: 'short'
     });
 
     if (!dailyData[day]) {
@@ -74,8 +72,13 @@ function updateWeeklyForecast(data) {
       <div class="forecast-day">
         <h3>${day}</h3>
         <img src="https://openweathermap.org/img/wn/${info.icon}@2x.png" alt="">
-        <p><strong>${Math.round(info.max)}°</strong> / ${Math.round(info.min)}°</p>
+        <p><strong>${Math.round(info.max)}°</strong> ${Math.round(info.min)}°</p>
       </div>
     `;
   });
 }
+
+//Load default weather for pre-defined city
+window.addEventListener('DOMContentLoaded', () => {
+  fetchWeather('Amsterdam'); 
+})
