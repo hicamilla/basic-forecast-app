@@ -185,7 +185,7 @@ strong {
 	gap: 10px;
 	margin-top: 20px;
 	padding: 18px;
-	background: #e1dbd1;
+	background: #d3cdc3;
 	border-radius: 16px;
 	transition: all 0.3s ease;
 }
@@ -206,13 +206,13 @@ strong {
 h3 {
 	font-size: 16px;
 	text-transform: uppercase;
-	color: var(--highlight);
+	color: white;
 }
 
 p strong {
-	font-size: 16px;
+	font-size: 17px;
 	font-weight: 700;
-	color: var(--highlight) !important;
+	color: white !important;
 }
 
 /*Footer*/
